@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mnie | TECH.DEV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="blob" id="cursor-blob"></div>
+
+<nav>
+    <div class="logo">TECH.DEV</div>
+    <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="oferty.html" style="color: var(--primary); font-weight: bold;">Oferty</a></li>
+        <li><a href="omnie.html">O mnie</a></li>
+    </ul>
+</nav>
+
+    <section class="about-section">
+        <div class="about-content">
+            <div class="price-tag">Ekspert & Sprzedawca</div>
+            <h1>Poznaj <span>moją filozofię</span> pracy</h1>
+            <p style="margin: 20px 0; color: var(--text-dim);">
+                Nazywam się [TWOJE IMIĘ]. Nie jestem tylko programistą, ale partnerem w Twoim biznesie. 
+                Moje doświadczenie w sprzedaży pozwala mi projektować strony, które nie tylko przyciągają oko, 
+                ale realnie zwiększają liczbę zapytań od Twoich klientów.
+            </p>
+
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h4>Doświadczenie w Sprzedaży B2B</h4>
+                    <p>Wiem, jak rozmawiać z Twoimi klientami poprzez design. Każdy przycisk na stronie ma swój cel biznesowy.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Dostarczanie Gotowych Systemów</h4>
+                    <p>Specjalizuję się w szybkich wdrożeniach dla branż takich jak gastronomia czy usługi premium.</p>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <span class="tech-badge">UI/UX Design</span>
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">SEO Mastery</span>
+                <span class="tech-badge">API Integrations</span>
+                <span class="tech-badge">E-commerce</span>
+            </div>
+            
+            <br><br>
+            <a href="index.html#contact" class="btn">Zbudujmy coś razem</a>
+        </div>
+
+        <div class="about-image">
+            <div class="photo-frame">
+                <div class="photo-placeholder">
+                    Twoje Zdjęcie <br> Profesjonalne
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 TECH.DEV - Autentyczność i Technologia
+    </footer>
+
+    <script>
+        const blob = document.getElementById('cursor-blob');
+        document.addEventListener('mousemove', (e) => {
+            blob.style.left = e.clientX - 300 + 'px';
+            blob.style.top = e.clientY - 300 + 'px';
+        });
+    </script>
+</body>
+</html>

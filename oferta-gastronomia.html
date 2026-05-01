@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strony dla Gastronomii | Twój Biznes Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="blob" id="cursor-blob"></div>
+
+<nav>
+    <div class="logo">TECH.DEV</div>
+    <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="oferty.html" style="color: var(--primary); font-weight: bold;">Oferty</a></li>
+        <li><a href="omnie.html">O mnie</a></li>
+    </ul>
+</nav>
+
+    <header class="gastronomy-hero">
+        <h1 style="font-size: 3.5rem;">Inteligentne Wizytówki<br><span>Dla Gastronomii</span></h1>
+        <p style="max-width: 700px; margin: 20px auto; color: #ccc;">Zmień swoją stronę w maszynę do zarabiania. Tworzę witryny, które łączą Twoją kuchnię z największymi platformami dostaw.</p>
+    </header>
+
+    <section class="offer-grid" id="demo">
+        <div class="offer-card">
+            <div class="icon-tag">FAST & SMART</div>
+            <br>
+            <h3>Integracja z Dostawami</h3>
+            <p>Twoi klienci nie muszą szukać Cię w aplikacji. Jeden klik na stronie przenosi ich bezpośrednio do Twojego menu na:</p>
+            <div class="platform-icons">
+                <span style="color: #06C167;">Uber Eats</span> | 
+                <span style="color: #FFC244;">Glovo</span> | 
+                <span style="color: #f36d00;">Pyszne.pl</span>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <div class="icon-tag">USER EXPERIENCE</div>
+            <br>
+            <h3>Cyfrowe Menu QR</h3>
+            <p>Tworzę interaktywne karty dań, które klient otwiera na telefonie będąc w lokalu. Zero drukowania, pełna nowoczesność.</p>
+        </div>
+
+        <div class="offer-card">
+            <div class="icon-tag">CONVERSION</div>
+            <br>
+            <h3>Przycisk Rezerwacji</h3>
+            <p>Bezpośrednia integracja z systemami rezerwacji stolików lub prosty formularz kontaktowy dostępny 24/7.</p>
+        </div>
+    </section>
+
+    <section style="padding: 50px 10%; text-align: center;">
+        <h2 style="margin-bottom: 30px;">Zbudujmy Twoją cyfrową restaurację</h2>
+        <a href="mailto:kontakt@twojafirma.pl" class="btn">Zapytaj o darmową wycenę</a>
+    </section>
+
+    <script>
+        // Efekt podążającego światła (skopiowany z głównej strony dla spójności)
+        const blob = document.getElementById('cursor-blob');
+        document.addEventListener('mousemove', (e) => {
+            blob.style.left = e.clientX - 300 + 'px';
+            blob.style.top = e.clientY - 300 + 'px';
+        });
+    </script>
+</body>
+</html>

@@ -3,131 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skuteczne Strony Wizytówkowe dla Biznesu</title>
-    <meta name="description" content="Błyskawiczne strony wizytówkowe bez zbędnego oprogramowania. Czysty kod, maksymalne bezpieczeństwo i integracje z systemami dostaw.">
+    <title>Expert Web Solutions | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="skrypt.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero-title">Strona internetowa, która pracuje, a nie generuje problemy</h1>
-            <p class="hero-subtitle">Tworzę nowoczesne wizytówki online oparte na czystym kodzie. Bez ciężkich systemów, bez paneli logowania, bez ryzyka włamań.</p>
-            <div class="hero-buttons">
-                <a href="https://www.bing.com/ck/a?!&&p=ece265211bdef15e05f64c553781db96217bdb90f7e67814f9f986fa59e8b19aJmltdHM9MTc3NjQ3MDQwMA&ptn=3&ver=2&hsh=4&fclid=00b55649-31fa-63b1-3e91-415730766209&psq=gmail&u=a1aHR0cHM6Ly9tYWlsLmdvb2dsZS5jb20vbWFpbD9obD1wbA" class="btn btn-primary">Zamów bezpłatną wycenę</a>
-                <a href="#comparison" class="btn btn-secondary">Dlaczego moja metoda?</a>
+    <div class="blob" id="cursor-blob"></div>
+
+<nav>
+    <div class="logo">TECH.DEV</div>
+    <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="oferty.html" style="color: var(--primary); font-weight: bold;">Oferty</a></li>
+        <li><a href="omnie.html">O mnie</a></li>
+    </ul>
+</nav>
+
+    <header id="home">
+        <h1><span>Twoja Firma Zasługuje</span><br>na Nowoczesną Stronę</h1>
+        <p>Tworzę cyfrowe doświadczenia, które konwertują odwiedzających w płacących klientów.</p>
+        
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="counter" data-target="120">0</span>
+                <p>Zadowolonych Klientów</p>
+            </div>
+            <div class="stat-item">
+                <span class="counter" data-target="65">0</span>
+                <p>Projektów Live</p>
+            </div>
+            <div class="stat-item">
+                <span class="counter" data-target="98">0</span>
+                <p>% Satysfakcji</p>
             </div>
         </div>
+        <br><br>
+        <a href="index2.html" class="btn">Zacznijmy teraz</a>
     </header>
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Moja filozofia: Tylko to, co niezbędne dla Twojego biznesu</h2>
-                <p class="text-center" style="font-size: 25px;">Większość agencji zmusza klientów do korzystania ze skomplikowanych systemów, które wymagają opieki. <strong>Ja stawiam na niezawodność.</strong></p>
-                <div class="features-grid">
-                    <article class="feature-card">
-                        <h3>Maksymalne Bezpieczeństwo</h3>
-                        <p>Twoja strona nie posiada panelu logowania, co eliminuje 99% dróg, którymi włamują się hakerzy. Jest całkowicie odporna na przejęcia.</p>
-                    </article>
-                    <article class="feature-card">
-                        <h3>Zero awaryjności</h3>
-                        <p>Brak bazy danych oznacza brak błędów typu "Internal Server Error". Strona po prostu działa – zawsze i wszędzie.</p>
-                    </article>
-                    <article class="feature-card">
-                        <h3>Gotowe Integracje</h3>
-                        <p>Dla branży gastronomicznej i usługowej: zamiast drogich systemów, łączę stronę z <strong>Uber Eats, Glovo czy systemami rezerwacji</strong>. Klient zamawia bezpośrednio u dostawcy.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+    <script>
+        // LICZNIK JS
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        const inc = target / 40;
+                        if(count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 30);
+                        } else {
+                            counter.innerText = target + "+";
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 1 });
 
-        <section id="comparison" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Porównanie: Moje strony vs Standardowe rozwiązania</h2>
-                <div class="table-container">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Cecha</th>
-                                <th>Typowa Agencja (WordPress/CMS)</th>
-                                <th class="highlight">Moje Rozwiązanie (Czysty Kod)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Szybkość ładowania</td>
-                                <td>Często powolna przez wtyczki</td>
-                                <td class="highlight">Błyskawiczna (Najwyższe noty Google)</td>
-                            </tr>
-                            <tr>
-                                <td>Odporność na ataki</td>
-                                <td>Wymaga stałych aktualizacji</td>
-                                <td class="highlight">Pełna (Brak luk bezpieczeństwa)</td>
-                            </tr>
-                            <tr>
-                                <td>Koszty niespodziewane</td>
-                                <td>Płatne aktualizacje i naprawy</td>
-                                <td class="highlight">Brak (Strona jest bezobsługowa)</td>
-                            </tr>
-                            <tr>
-                                <td>Utrzymanie</td>
-                                <td>Dodatkowo płatne serwery</td>
-                                <td class="highlight">Profesjonalna infrastruktura w cenie</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        <section id="pricing" class="section bg-light">
-    <div class="container text-center">
-        <h2 class="section-title">Przejrzyste warunki, żadnych gwiazdek</h2>
-        <div class="pricing-box" style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 600px; margin: 0 auto;">
-            <h3 style="font-size: 2rem; color: #007bff;">700 - 2000 PLN</h3>
-            <p style="color: #666; margin-bottom: 20px;">Jednorazowa opłata za gotową witrynę</p>
-            <p style="color: #666; margin-bottom: 20px;">Cena regularna może być niższa w przypadku aktualnych promocji lub pakietów wdrożeniowych.</p>
-            <ul style="list-style: none; text-align: left; margin-bottom: 30px;">
-                <li>✅ Projekt graficzny i wdrożenie</li>
-                <li>✅ Optymalizacja pod telefony</li>
-                <li>✅ Konfiguracja wizytówki Google Maps</li>
-                <li>✅ <strong>0 zł</strong> miesięcznego abonamentu</li>
-                <li>✅ <strong>0 zł</strong> za aktualizacje bezpieczeństwa</li>
-            </ul>
-            <p><em>"Zamiast płacić agencji co miesiąc za 'gotowość', zainwestuj raz w technologię, która nie wymaga serwisowania."</em></p>
-        </div>
-    </div>
-</section>
+        counters.forEach(c => observer.observe(c));
 
-        <section class="section">
-            <div class="container text-center">
-                <h2>Branże, dla których mam gotowe schematy:</h2>
-                <div class="niches">
-                    <span class="niche-tag">Myjnie i Detailing</span>
-                    <span class="niche-tag">Gastronomia (Dostawy)</span>
-                    <span class="niche-tag">Usługi Wykończeniowe</span>
-                    <span class="niche-tag">Lokalni Specjaliści</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <div class="container text-center">
-                <h2>Porozmawiajmy o Twoim projekcie</h2>
-                <p>Napisz do mnie – przygotuję propozycję, która pozwoli Ci zaoszczędzić na serwisowaniu i skupić się na zarabianiu.</p>
-                <div class="contact-details">
-                    <p><strong>Email:</strong> <a href="https://www.bing.com/ck/a?!&&p=ece265211bdef15e05f64c553781db96217bdb90f7e67814f9f986fa59e8b19aJmltdHM9MTc3NjQ3MDQwMA&ptn=3&ver=2&hsh=4&fclid=00b55649-31fa-63b1-3e91-415730766209&psq=gmail&u=a1aHR0cHM6Ly9tYWlsLmdvb2dsZS5jb20vbWFpbD9obD1wbA">wwwpage234@gmail.com</a></p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2026 | Nowoczesne Technologie Webowe dla Biznesu.</p>
-        </div>
-    </footer>
-
+        // EFEKT PODĄŻAJĄCEGO ŚWIATŁA
+        const blob = document.getElementById('cursor-blob');
+        document.addEventListener('mousemove', (e) => {
+            blob.style.left = e.clientX - 300 + 'px';
+            blob.style.top = e.clientY - 300 + 'px';
+        });
+    </script>
 </body>
 </html>

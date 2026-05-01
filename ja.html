@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dlaczego ja? | TECH.DEV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="blob" id="cursor-blob"></div>
+
+    <nav>
+        <div class="logo">TECH.DEV</div>
+        <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="index2.html">Dlaczego strona?</a></li>
+            <li><a href="ja.html" style="color: var(--primary);">Dlaczego ja?</a></li>
+            <li><a href="oferty.html">Oferty</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <div class="about-content">
+            <div class="price-tag">Ekspert Nowej Generacji</div>
+            <h1>Nie szukaj wykonawcy. <br><span>Znajdź partnera.</span></h1>
+            <p style="margin: 20px 0; color: var(--text-dim); font-size: 1.1rem;">
+                Większość firm programistycznych skupia się na kodzie. Ja skupiam się na **Twoich wynikach**. 
+                Strona, która nie generuje zysku, jest tylko ozdobą. Moim zadaniem jest dostarczenie Ci narzędzia, 
+                które wygrywa z konkurencją w Google, na telefonach i w oczach Twoich klientów.
+            </p>
+            
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js - Szybkość</span>
+                <span class="tech-badge">UI/UX - Konwersja</span>
+                <span class="tech-badge">SEO - Widoczność</span>
+                <span class="tech-badge">API - Automatyzacja</span>
+            </div>
+        </div>
+
+        <div class="about-image">
+            <div class="photo-frame">
+                <div class="photo-placeholder">
+                    TWOJE ZDJĘCIE <br> LUB LOGO
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 50px 10%; display: flex; justify-content: space-around; background: rgba(255,255,255,0.02);">
+        <div style="text-align: center;">
+            <h2 style="color: var(--primary); font-size: 3rem;">100%</h2>
+            <p style="color: var(--text-dim);">Dostarczonych projektów</p>
+        </div>
+        <div style="text-align: center;">
+            <h2 style="color: var(--secondary); font-size: 3rem;">< 1.5s</h2>
+            <p style="color: var(--text-dim);">Średni czas ładowania</p>
+        </div>
+        <div style="text-align: center;">
+            <h2 style="color: var(--primary); font-size: 3rem;">24/7</h2>
+            <p style="color: var(--text-dim);">Moje wsparcie techniczne</p>
+        </div>
+    </section>
+
+    <section class="grid-container" style="padding-top: 100px;">
+        <div class="card">
+            <div class="price-tag">Wartość 01</div>
+            <h3>Transparentność</h3>
+            <p style="color: var(--text-dim);">Nie używam technicznego żargonu, żeby Cię zmylić. Wyjaśniam proces krok po kroku i zawsze wiesz, za co płacisz.</p>
+        </div>
+        <div class="card">
+            <div class="price-tag">Wartość 02</div>
+            <h3>Czysty Kod</h3>
+            <p style="color: var(--text-dim);">Piszę kod od zera lub na lekkich frameworkach. Zero zbędnych wtyczek, które spowalniają stronę i zagrażają bezpieczeństwu.</p>
+        </div>
+        <div class="card">
+            <div class="price-tag">Wartość 03</div>
+            <h3>Biznesowe Podejście</h3>
+            <p style="color: var(--text-dim);">Mam doświadczenie w handlu. Wiem, jak sprawić, by użytkownik kliknął "Zarezerwuj" lub "Kup teraz".</p>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div style="margin-bottom: 50px;">
+            <div class="price-tag">Analiza Rynku</div>
+            <h2>Fakty vs Obietnice</h2>
+        </div>
+<div id="oferta-porownanie" class="table-container">
+    <table class="standard-table">
+        <thead>
+            <tr>
+                <th>Kryterium</th>
+                <th>Typowa Agencja</th>
+                <th class="highlight">Moja Oferta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="feature">Szybkość ładowania</td>
+                <td class="others">3 - 5 sekund</td>
+                <td class="me">Poniżej 1 sekundy</td>
+            </tr>
+            <tr>
+                <td class="feature">Wynik Google Speed</td>
+                <td class="others">30% - 50%</td>
+                <td class="me">95% - 100%</td>
+            </tr>
+            <tr>
+                <td class="feature">Optymalizacja SEO</td>
+                <td class="others">Podstawowa</td>
+                <td class="me">Zaawansowana</td>
+            </tr>
+            <tr>
+                <td class="feature">Wsparcie po oddaniu</td>
+                <td class="others">Płatne</td>
+                <td class="me">W cenie (24/7)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+    </section>
+
+    <section style="padding: 100px 10%; text-align: center;">
+        <div class="price-tag">Ostatni Krok</div>
+        <h2>Nie wybieraj w ciemno. Wybierz jakość.</h2>
+        <br>
+        <a href="oferty.html" class="btn">Sprawdź konkretne schematy</a>
+    </section>
+
+    <footer>
+        &copy; 2026 TECH.DEV - Autentyczność i Profesjonalizm
+    </footer>
+
+    <script>
+        const blob = document.getElementById('cursor-blob');
+        document.addEventListener('mousemove', (e) => {
+            blob.style.left = e.clientX - 300 + 'px';
+            blob.style.top = e.clientY - 300 + 'px';
+        });
+    </script>
+</body>
+</html>
