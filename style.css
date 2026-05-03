@@ -25,7 +25,6 @@ body {
     line-height: 1.6;
 }
 
-/* --- TŁO I EFEKTY WIZUALNE --- */
 .blob {
     position: fixed;
     width: 600px;
@@ -38,7 +37,6 @@ body {
     transition: 0.15s ease-out;
 }
 
-/* --- NAWIGACJA --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -74,7 +72,6 @@ nav ul li a {
 }
 nav ul li a:hover { opacity: 1; color: var(--primary); }
 
-/* --- HERO SECTIONS --- */
 header {
     min-height: 100vh;
     display: flex;
@@ -103,7 +100,6 @@ h1 span {
     min-height: 60vh;
 }
 
-/* --- STATYSTYKI (LICZNIK) --- */
 .stats-container {
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +127,6 @@ h1 span {
 .counter { font-size: 3.5rem; font-weight: 900; color: var(--primary); display: block; }
 .stat-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); }
 
-/* --- TABELA PORÓWNAWCZA --- */
 .comparison-section { padding: 100px 10%; text-align: center; }
 .table-wrapper {
     overflow-x: auto;
@@ -210,7 +205,7 @@ th { color: #fff; text-transform: uppercase; font-size: 1rem; }
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* --- STOPKA --- */
+
 footer {
     padding: 60px 10%;
     text-align: center;
@@ -219,14 +214,13 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- RESPONSYWNOŚĆ --- */
 @media (max-width: 768px) {
     nav { padding: 1rem 5%; }
     nav ul { display: none; }
     h1 { font-size: 2.8rem; }
     .stat-item { width: 100%; }
 }
-/* --- SEKCJA O MNIE --- */
+
 .about-section {
     min-height: 100vh;
     padding: 150px 10% 80px;
@@ -400,7 +394,6 @@ footer {
     right: 20px;
 }
 
-/* --- SEKCJA FAQ --- */
 .faq-section { padding: 100px 10%; }
 .faq-item {
     background: var(--card-bg);
@@ -427,7 +420,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- KONTAKT --- */
 .contact-section { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
 .contact-form { display: flex; flex-direction: column; gap: 15px; }
 .contact-form input, .contact-form textarea {
@@ -440,10 +432,7 @@ footer {
 }
 .contact-form input:focus { border-color: var(--primary); }
 
-/* --- FINALNY FIX RESPONSYWNOŚCI --- */
-
 @media (max-width: 768px) {
-    /* 1. Naprawa menu i nagłówka */
     nav {
         flex-direction: column !important;
         position: relative !important;
@@ -464,7 +453,6 @@ footer {
         text-align: center;
     }
 
-    /* 2. Naprawa bloków (żeby nie nachodziły na siebie) */
     .about-section, 
     .contact-section, 
     .grid-container, 
@@ -472,15 +460,15 @@ footer {
     .stats-container,
     .process-steps {
         display: flex !important;
-        flex-direction: column !important; /* Wszystko jeden pod drugim */
-        grid-template-columns: 1fr !important; /* Dla gridów */
+        flex-direction: column !important; 
+        grid-template-columns: 1fr !important; 
         padding: 40px 5% !important;
         gap: 30px !important;
         text-align: center;
     }
 
     .about-image {
-        order: -1; /* Zdjęcie ląduje nad tekstem */
+        order: -1; 
         margin-bottom: 20px;
     }
 
@@ -491,20 +479,19 @@ footer {
         margin: 0 auto;
     }
 
-    /* 3. TABELA: Układ pionowy (bez przesuwania na boki) */
     .table-wrapper {
-        overflow-x: hidden !important; /* Wyłączamy suwak boczny */
+        overflow-x: hidden !important; 
         background: transparent !important;
         padding: 0 !important;
         border: none !important;
     }
 
     table, thead, tbody, th, td, tr {
-        display: block !important; /* Robimy z tabeli listę bloków */
+        display: block !important; 
     }
 
     table thead {
-        display: none !important; /* Ukrywamy oryginalny nagłówek */
+        display: none !important; 
     }
 
     table tr {
@@ -524,9 +511,8 @@ footer {
         text-align: right;
     }
 
-    /* Dodajemy etykiety przed danymi */
     table td::before {
-        content: attr(data-label); /* Pobiera tekst z HTML */
+        content: attr(data-label); 
         font-weight: 900;
         text-transform: uppercase;
         font-size: 0.7rem;
@@ -547,14 +533,11 @@ footer {
     }
 
     .feature-name::before {
-        display: none !important; /* Nazwa cechy nie potrzebuje etykiety */
+        display: none !important; 
     }
 }
 
-/* --- FINALNY I KOMPLETNY FIX RESPONSYWNOŚCI --- */
-
 @media (max-width: 768px) {
-    /* 1. Reset wysokości sekcji - to rozwiązuje problem "nachodzenia" bloków */
     header, 
     section, 
     .about-section, 
@@ -563,15 +546,14 @@ footer {
     .contact-section {
         height: auto !important;
         min-height: auto !important;
-        padding: 80px 5% 40px !important; /* Większy margines od góry dla nav */
+        padding: 80px 5% 40px !important; 
         display: flex !important;
         flex-direction: column !important;
     }
 
-    /* 2. Naprawa menu (Nav) */
     nav {
         flex-direction: column !important;
-        position: relative !important; /* Stały układ zamiast fixed na mobile lepiej działa */
+        position: relative !important; 
         padding: 20px 5% !important;
         background: var(--bg) !important;
         height: auto !important;
@@ -589,7 +571,6 @@ footer {
         margin: 0 !important;
     }
 
-    /* 3. Naprawa bloków treści i gridów */
     .grid-container, 
     .benefits-grid, 
     .stats-container, 
@@ -601,7 +582,6 @@ footer {
         gap: 20px !important;
     }
 
-    /* 4. Tabela bez przesuwania (Karty) */
     .table-wrapper {
         overflow-x: hidden !important;
         background: transparent !important;
@@ -643,7 +623,6 @@ footer {
         text-align: left;
     }
 
-    /* Wyjątek dla nazwy cechy w tabeli */
     .feature-name {
         background: rgba(255, 255, 255, 0.05);
         justify-content: center !important;
@@ -654,9 +633,8 @@ footer {
         display: none !important;
     }
 
-    /* 5. Naprawa zdjęć i ramek */
     .about-image {
-        order: -1; /* Zdjęcie nad tekst */
+        order: -1; 
         width: 100% !important;
         margin-bottom: 30px;
     }
@@ -668,7 +646,6 @@ footer {
         margin: 0 auto !important;
     }
 
-    /* 6. Naprawa FAQ i Kontaktu */
     .contact-section {
         grid-template-columns: 1fr !important;
     }
@@ -678,7 +655,6 @@ footer {
         word-wrap: break-word;
     }
 }
-/* TABELA: Gwarantowana widoczność na mobile */
     .table-wrapper {
         overflow-x: hidden !important;
         background: transparent !important;
@@ -693,7 +669,7 @@ footer {
     }
 
     table thead {
-        display: none !important; /* Ukrywamy poziomy nagłówek */
+        display: none !important; 
     }
 
     table tbody, table tr, table td {
@@ -719,7 +695,6 @@ footer {
         min-height: 50px !important;
     }
 
-    /* Etykiety pobierane z HTML - MUSZĄ BYĆ W JA.HTML */
     table td::before {
         content: attr(data-label); 
         font-weight: 900;
@@ -730,7 +705,6 @@ footer {
         padding-right: 10px;
     }
 
-    /* Nazwa cechy (pierwsza komórka wiersza) */
     .feature-name {
         background: rgba(0, 242, 255, 0.1) !important;
         justify-content: center !important;
@@ -741,20 +715,19 @@ footer {
     }
 
     .feature-name::before {
-        display: none !important; /* Tutaj nie chcemy etykiety */
+        display: none !important; 
     }
 
-    /* --- NAJPROSTSZA TABELA --- */
 .simple-table-container {
     width: 100%;
-    overflow-x: auto; /* To ratuje widok na telefonie */
+    overflow-x: auto; 
     margin: 40px 0;
     padding: 10px;
 }
 
 .simple-table {
     width: 100%;
-    min-width: 500px; /* Zapobiega ściskaniu tekstu na siłę */
+    min-width: 500px;
     border-collapse: collapse;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
@@ -777,7 +750,6 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Wyróżnienie Twojej kolumny */
 .simple-table .highlight {
     background: rgba(0, 242, 255, 0.1);
     color: var(--primary);
@@ -785,12 +757,10 @@ footer {
     text-align: center;
 }
 
-/* Usunięcie obramowania z ostatniego wiersza */
 .simple-table tr:last-child td {
     border-bottom: none;
 }
 
-/* Responsywność - komunikat dla użytkownika */
 @media (max-width: 768px) {
     .simple-table-container::after {
         content: "← Przesuń tabelę w bok →";
@@ -801,10 +771,10 @@ footer {
         margin-top: 10px;
     }
 }
-/* Kontener tabeli */
+
 #oferta-porownanie {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f172a; /* Ciemne, nowoczesne tło */
+    background: #0f172a; 
     padding: 40px;
     border-radius: 20px;
     color: #f8fafc;
@@ -812,14 +782,13 @@ footer {
     margin: 20px auto;
 }
 
-/* Stylizacja samej tabeli */
+
 .standard-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 10px; /* Odstępy między wierszami */
+    border-spacing: 0 10px; 
 }
 
-/* Nagłówki */
 .standard-table th {
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -829,37 +798,31 @@ footer {
     text-align: left;
 }
 
-/* Wyróżniony nagłówek "Moja Oferta" */
 .standard-table th.highlight {
-    color: #38bdf8; /* Jasnoniebieski neon */
+    color: #38bdf8; 
     font-weight: 800;
 }
 
-/* Styl wierszy */
 .standard-table tbody tr {
-    background: rgba(30, 41, 59, 0.7); /* Efekt szklanego panelu */
+    background: rgba(30, 41, 59, 0.7); 
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Zaokrąglenia dla wierszy (wymaga border-separate) */
 .standard-table tbody tr td:first-child { border-radius: 12px 0 0 12px; }
 .standard-table tbody tr td:last-child { border-radius: 0 12px 12px 0; }
 
-/* Komórki */
 .standard-table td {
     padding: 20px 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Efekt hover po najechaniu na wiersz */
 .standard-table tbody tr:hover {
     transform: scale(1.02);
     background: rgba(51, 65, 85, 0.8);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(56, 189, 248, 0.1);
 }
 
-/* Stylizacja poszczególnych kolumn */
 .feature {
     font-weight: 600;
     color: #e2e8f0;
@@ -869,14 +832,12 @@ footer {
     color: #64748b;
 }
 
-/* Twoja oferta - efekt "Glow" */
 .me {
     color: #22d3ee;
     font-weight: 700;
     text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
 }
 
-/* Responsywność dla urządzeń mobilnych */
 @media (max-width: 600px) {
     #oferta-porownanie {
         padding: 15px;
@@ -885,4 +846,277 @@ footer {
         padding: 10px;
         font-size: 0.85rem;
     }
+}
+.testimonials-section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.testimonials-container {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory; 
+}
+
+.testimonial-card {
+    min-width: 320px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 24px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.stars {
+    color: var(--primary); 
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    color: var(--text-dim);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-card h4 {
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.testimonial-card .role {
+    font-size: 0.8rem;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.testimonials-container::-webkit-scrollbar {
+    height: 8px;
+}
+.testimonials-container::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+.premium-comparison { padding: 100px 10%; background: #050505; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.tag { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.comp-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.comp-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.15);
+    transform: translateY(-10px);
+}
+
+.me-section h4 { color: var(--primary); margin-bottom: 10px; font-size: 1.1rem; }
+.me-section p { color: #fff; margin-bottom: 25px; line-height: 1.6; }
+
+.others-section { 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-top: 20px; 
+}
+.others-section h4 { color: #ff5e5e; margin-bottom: 10px; font-size: 1.1rem; }
+.others-section p { color: #888; line-height: 1.6; }
+
+@media (max-width: 768px) {
+    .comparison-grid { grid-template-columns: 1fr; }
+}
+.premium-comparison { padding: 80px 5%; background: #050505; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-desc { color: var(--text-dim); max-width: 600px; margin: 15px auto; }
+.tag { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 25px;
+}
+
+.comp-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.comp-card:hover {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.me-section { margin-bottom: 30px; }
+.me-section h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.2rem; display: flex; align-items: center; }
+.me-section h4::before { content: "✓"; margin-right: 10px; color: var(--primary); font-size: 1.4rem; }
+.me-section p { color: #eee; line-height: 1.7; font-size: 0.95rem; }
+
+.others-section { 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-top: 25px; 
+}
+.others-section h4 { color: #ff5e5e; margin-bottom: 15px; font-size: 1.1rem; }
+.others-section h4::before { content: "✕"; margin-right: 10px; color: #ff5e5e; }
+.others-section p { color: #888; line-height: 1.6; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .comparison-grid { grid-template-columns: 1fr; }
+    .premium-comparison { padding: 40px 5%; }
+}
+
+.premium-comparison { padding: 80px 5%; background: #050505; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-desc { color: var(--text-dim); max-width: 600px; margin: 15px auto; }
+.tag { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.comp-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.comp-card.bestseller {
+    border: 2px solid var(--primary);
+    background: linear-gradient(145deg, rgba(0, 242, 255, 0.05), transparent);
+}
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: #000;
+    padding: 5px 15px;
+    font-weight: 900;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.comp-card:hover { border-color: var(--primary); }
+
+.me-section h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.2rem; }
+.me-section p { color: #eee; line-height: 1.7; font-size: 0.95rem; }
+
+.others-section { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 25px; margin-top: 25px; }
+.others-section h4 { color: #ff5e5e; margin-bottom: 15px; font-size: 1.1rem; }
+.others-section p { color: #888; line-height: 1.6; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .comparison-grid { grid-template-columns: 1fr; }
+}
+
+.kontakt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.kontakt-style {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border: none;
+    padding: 18px 45px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition); 
+    box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.kontakt-style:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.5);
+    filter: brightness(1.1);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 242, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
+}
+
+.kontakt-style:not(:hover) {
+    animation: pulse 2s infinite;
+}
+.kontakt {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    width: 100%;
+    margin: 50px 0;        
+}
+
+.kontakt-style {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border: none;
+    
+    padding: 22px 60px;      
+    font-size: 1.2rem;       
+    min-width: 300px;        
+    
+    color: white;
+    font-weight: 900;        
+    text-transform: uppercase;
+    letter-spacing: 3px;    
+    
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.2);
+}
+
+.kontakt-style:hover {
+    transform: translateY(-5px) scale(1.05); 
+    box-shadow: 0 15px 40px rgba(112, 0, 255, 0.5);
+    filter: brightness(1.2);
 }

@@ -14,9 +14,9 @@
     <nav>
         <div class="logo">TECH.DEV</div>
         <ul>
-            <li><a href="index.html">Powrót</a></li>
-            <li><a href="oferty.html">Zobacz Oferty</a></li>
-            <li><a href="omnie.html">O mnie</a></li>
+            <li id="powie"><a href="index.html">Powrót</a></li>
+            <li id="powie"><a href="oferty.html">Zobacz Oferty</a></li>
+            <li id="powie"><a href="omnie.html">O mnie</a></li>
         </ul>
     </nav>
 
@@ -114,19 +114,19 @@
         <a href="ja.html" class="btn">Zobacz Dlaczego ja.</a>
     </section>
 
-    <footer>
-        &copy; 2026 TECH.DEV - Autorskie Strategie Cyfrowe
-    </footer>
+<footer style="margin-top: 50px; padding: 30px; border-top: 1px solid #2a2929; text-align: center; color: #888;">
+    <p>&copy; 2026 TECH.DEV &bull; 
+        <a href="Kontakt.html" style="color: var(--primary); text-decoration: none; font-weight: bold;font-size: large;">Skontaktuj się z nami klikając we mnie</a>
+    </p>
+</footer>
 
     <script>
-        // Logika podążającego tła
         const blob = document.getElementById('cursor-blob');
         document.addEventListener('mousemove', (e) => {
             blob.style.left = e.clientX - 300 + 'px';
             blob.style.top = e.clientY - 300 + 'px';
         });
 
-        // Logika FAQ
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const span = element.querySelector('span');

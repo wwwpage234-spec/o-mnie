@@ -14,10 +14,9 @@
     <nav>
         <div class="logo">TECH.DEV</div>
         <ul>
-            <li><a href="index.html">Start</a></li>
-            <li><a href="index2.html">Dlaczego strona?</a></li>
-            <li><a href="ja.html" style="color: var(--primary);">Dlaczego ja?</a></li>
-            <li><a href="oferty.html">Oferty</a></li>
+            <li id="powie"><a href="index.html">Start</a></li>
+            <li id="powie"><a href="index2.html">Dlaczego strona?</a></li>
+            <li id="powie"><a href="oferty.html">Oferty</a></li>
         </ul>
     </nav>
 
@@ -32,7 +31,7 @@
             </p>
             
             <div class="tech-stack">
-                <span class="tech-badge">Next.js - Szybkość</span>
+                <span class="tech-badge">Script.js - Szybkość</span>
                 <span class="tech-badge">UI/UX - Konwersja</span>
                 <span class="tech-badge">SEO - Widoczność</span>
                 <span class="tech-badge">API - Automatyzacja</span>
@@ -42,7 +41,7 @@
         <div class="about-image">
             <div class="photo-frame">
                 <div class="photo-placeholder">
-                    TWOJE ZDJĘCIE <br> LUB LOGO
+                    <img src="obraz1.jpg" alt="logo">
                 </div>
             </div>
         </div>
@@ -84,42 +83,95 @@
     <section class="comparison-section">
         <div style="margin-bottom: 50px;">
             <div class="price-tag">Analiza Rynku</div>
-            <h2>Fakty vs Obietnice</h2>
+            <h2>Inne firmy vs Moje serwisy</h2>
         </div>
-<div id="oferta-porownanie" class="table-container">
-    <table class="standard-table">
-        <thead>
-            <tr>
-                <th>Kryterium</th>
-                <th>Typowa Agencja</th>
-                <th class="highlight">Moja Oferta</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="feature">Szybkość ładowania</td>
-                <td class="others">3 - 5 sekund</td>
-                <td class="me">Poniżej 1 sekundy</td>
-            </tr>
-            <tr>
-                <td class="feature">Wynik Google Speed</td>
-                <td class="others">30% - 50%</td>
-                <td class="me">95% - 100%</td>
-            </tr>
-            <tr>
-                <td class="feature">Optymalizacja SEO</td>
-                <td class="others">Podstawowa</td>
-                <td class="me">Zaawansowana</td>
-            </tr>
-            <tr>
-                <td class="feature">Wsparcie po oddaniu</td>
-                <td class="others">Płatne</td>
-                <td class="me">W cenie (24/7)</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</div>
+<section class="premium-comparison">
+    <div class="section-header">
+        <span class="tag">Inżynieria Biznesowa</span>
+        <h2>Dlaczego współpracujesz z TECH.DEV?</h2>
+        <p class="section-desc">Nie buduję tylko "stron". Buduję aktywa cyfrowe, które pracują na Twój zysk 24/7.</p>
+    </div>
+
+    <div class="comparison-grid">
+        <div class="comp-card">
+            <div class="card-content">
+                <div class="me-section">
+                    <h4>Moja Strategia: Skalowalna Architektura</h4>
+                    <p>Piszę kod od podstaw, wykorzystując nowoczesne frameworki (React, Next.js). Każda linijka kodu jest przemyślana pod kątem przyszłego rozwoju. Twoja strona będzie gotowa na tysiące użytkowników jednocześnie, bez konieczności kosztownej przebudowy.</p>
+                </div>
+                <div class="others-section">
+                    <h4>Standard Rynku: "Pająk" Wtyczek</h4>
+                    <p>Agencje często instalują dziesiątki gotowych wtyczek, które drastycznie obniżają wydajność. Strona staje się ciężka, podatna na ataki hakerskie i niekompatybilna z przyszłymi aktualizacjami.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="comp-card">
+            <div class="card-content">
+                <div class="me-section">
+                    <h4>Wydajność: Wyniki 95-100/100</h4>
+                    <p>W dzisiejszym internecie 3 sekundy ładowania to śmierć biznesu. Moje projekty przechodzą rygorystyczne testy Core Web Vitals. Wysoka prędkość to nie tylko wygoda użytkownika, to kluczowy czynnik rankingowy w Google, który winduje Cię nad konkurencję.</p>
+                </div>
+                <div class="others-section">
+                    <h4>Standard Rynku: "Zamulone" Strony</h4>
+                    <p>Typowe realizacje ładują się 5-10 sekund, tracąc połowę potencjalnych klientów już w pierwszej fazie kontaktu. Google penalizuje takie strony, spychając je na odległe pozycje w wyszukiwarkach.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="comp-card">
+            <div class="card-content">
+                <div class="me-section">
+                    <h4>Pełna Autonomia i Dostęp</h4>
+                    <p>Kod źródłowy należy do Ciebie. Przekazuję pełną dokumentację i dostęp. Nie stosuję żadnych "smyczy" ani ukrytych blokad. Buduję relacje oparte na zaufaniu, a nie na strachu, że po zakończeniu prac stracisz kontrolę nad własnym biznesem.</p>
+                </div>
+                <div class="others-section">
+                    <h4>Standard Rynku: Uzależnienie (Vendor Lock-in)</h4>
+                    <p>Wielu serwisantów stosuje politykę "zakładnika". Brak dostępu do serwera, brak prawa do edycji kodu przez osoby trzecie, próby wymuszenia opłat za każdą drobną zmianę.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="comp-card">
+            <div class="card-content">
+                <div class="me-section">
+                    <h4>Design Nastawiony na Konwersję</h4>
+                    <p>Estetyka to dopiero początek. Projektuję układ strony zgodnie z psychologią użytkownika (CRO). Każdy przycisk, każdy nagłówek i każdy blok tekstu ma za zadanie prowadzić klienta za rękę aż do momentu: "Kup teraz" lub "Wyślij zapytanie".</p>
+                </div>
+                <div class="others-section">
+                    <h4>Standard Rynku: "ładna wydmuszka"</h4>
+                    <p>Strony, które wyglądają ładnie, ale nie sprzedają. Brak analizy zachowań użytkowników, generyczny układ skopiowany z szablonu, który nie wyróżnia Twojej marki na tle rynku.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="comp-card">
+            <div class="card-content">
+                <div class="me-section">
+                    <h4>Automatyzacja Operacyjna</h4>
+                    <p>Łączę Twoją stronę z narzędziami, których używasz: Pyszne.pl, UberEats, systemy rezerwacyjne, CRMy, e-mail marketing. Eliminuję ręczną pracę. Twój biznes ma działać automatycznie, podczas gdy Ty skupiasz się na zarządzaniu.</p>
+                </div>
+                <div class="others-section">
+                    <h4>Standard Rynku: Izolowane Wizytówki</h4>
+                    <p>Strony, które są tylko "wizytówką". Brak automatyzacji, brak wymiany danych z systemami zewnętrznymi. Wszystko musisz robić ręcznie, co ogranicza skalowanie Twojego biznesu.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="comp-card">
+            <div class="card-content">
+                <div class="me-section">
+                    <h4>Bezpieczeństwo klasy Enterprise</h4>
+                    <p>Wdrażam standardy ochrony danych i certyfikaty SSL. Moje strony to "twierdze". Zero podatności na typowe ataki. Jeśli projekt wymaga aktualizacji – robię to w sposób kontrolowany, nie psując Twoich zysków.</p>
+                </div>
+                <div class="others-section">
+                    <h4>Standard Rynku: "Samobójcze" Aktualizacje</h4>
+                    <p>Własne, "pokraczne" skrypty, które rozpadają się przy każdej aktualizacji serwera. Często kończy się to całkowitym przestojem strony i kosztownymi naprawami w trybie awaryjnym.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </section>
 
     <section style="padding: 100px 10%; text-align: center;">
@@ -129,9 +181,11 @@
         <a href="oferty.html" class="btn">Sprawdź konkretne schematy</a>
     </section>
 
-    <footer>
-        &copy; 2026 TECH.DEV - Autentyczność i Profesjonalizm
-    </footer>
+<footer style="margin-top: 50px; padding: 30px; border-top: 1px solid #2a2929; text-align: center; color: #888;">
+    <p>&copy; 2026 TECH.DEV &bull; 
+        <a href="Kontakt.html" style="color: var(--primary); text-decoration: none; font-weight: bold;font-size: large;">Skontaktuj się z nami klikając we mnie</a>
+    </p>
+</footer>
 
     <script>
         const blob = document.getElementById('cursor-blob');

@@ -14,9 +14,9 @@
 <nav>
     <div class="logo">TECH.DEV</div>
     <ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="oferty.html" style="color: var(--primary); font-weight: bold;">Oferty</a></li>
-        <li><a href="omnie.html">O mnie</a></li>
+        <li id="powie"><a href="index.html">Start</a></li>
+        <li id="powie"><a href="oferty.html" style="color: var(--primary); font-weight: bold;">Oferty</a></li>
+        <li id="powie"><a href="omnie.html">O mnie</a></li>
     </ul>
 </nav>
 
@@ -43,7 +43,6 @@
     </header>
 
     <script>
-        // LICZNIK JS
         const counters = document.querySelectorAll('.counter');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -68,12 +67,59 @@
 
         counters.forEach(c => observer.observe(c));
 
-        // EFEKT PODĄŻAJĄCEGO ŚWIATŁA
         const blob = document.getElementById('cursor-blob');
         document.addEventListener('mousemove', (e) => {
             blob.style.left = e.clientX - 300 + 'px';
             blob.style.top = e.clientY - 300 + 'px';
         });
     </script>
+    <section class="testimonials-section">
+    <h2>Co mówią o nas klienci</h2>
+    <div class="testimonials-container">
+        <script>
+        </script>
+        
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Genialna współpraca! Strona działa jak marzenie."</p><h4>Marek K.</h4><span class="role">E-commerce</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Profesjonalny design i świetna obsługa. Polecam!"</p><h4>Anna N.</h4><span class="role">Brand Manager</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Projekt oddany przed czasem, zero błędów."</p><h4>Piotr Z.</h4><span class="role">Developer</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Bardzo intuicyjna strona, klienci są zachwyceni."</p><h4>Kasia L.</h4><span class="role">Właścicielka kawiarni</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Wyniki Google Speed skoczyły z 40 na 98!"</p><h4>Tomasz W.</h4><span class="role">SaaS Founder</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Design, który przyciąga wzrok i sprzedaje."</p><h4>Ewa C.</h4><span class="role">Creative Director</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Wersja mobilna działa perfekcyjnie."</p><h4>Jakub B.</h4><span class="role">Blogger</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Bezpieczeństwo na najwyższym poziomie."</p><h4>Magda S.</h4><span class="role">Prawnik</span></div>
+
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Szybki kontakt i konkretne rozwiązania."</p><h4>Adam R.</h4><span class="role">Dyrektor IT</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Nareszcie mam stronę, z której jestem dumny."</p><h4>Beata G.</h4><span class="role">Grafik</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Efektywność ponad wszystko. Świetna robota!"</p><h4>Karol M.</h4><span class="role">Marketing</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Bardzo polecam za indywidualne podejście."</p><h4>Dominika P.</h4><span class="role">Fotograf</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Strona ładuje się błyskawicznie, to najważniejsze."</p><h4>Łukasz D.</h4><span class="role">Blogger</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Czysty kod i świetny UI/UX."</p><h4>Monika T.</h4><span class="role">Frontend Dev</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Najlepszy wybór w tej cenie."</p><h4>Szymon K.</h4><span class="role">Biznes</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Wsparcie 24/7 to nie żart, zawsze pomagają."</p><h4>Aleksandra W.</h4><span class="role">CEO</span></div>
+
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Projektowanie stron na światowym poziomie."</p><h4>Wojciech J.</h4><span class="role">Startup</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Bardzo zadowolony z efektu końcowego."</p><h4>Julia O.</h4><span class="role">Architekt</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Zero opóźnień, zero problemów."</p><h4>Krzysztof H.</h4><span class="role">Programista</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Dbałość o detale to Wasz znak rozpoznawczy."</p><h4>Natalia B.</h4><span class="role">Projektant</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Strona konwertuje jak nigdy wcześniej."</p><h4>Michał R.</h4><span class="role">Sprzedaż</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Profesjonalny support, polecam każdemu."</p><h4>Paulina C.</h4><span class="role">Manager</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Szybkość, jakość i świetna cena."</p><h4>Artur L.</h4><span class="role">Właściciel Firmy</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Niesamowite doświadczenie użytkownika."</p><h4>Zuzanna F.</h4><span class="role">UX Designer</span></div>
+
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Strona na lata. Jestem bardzo zadowolony."</p><h4>Robert S.</h4><span class="role">Przedsiębiorca</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Fachowa wiedza i świetne doradztwo."</p><h4>Patrycja M.</h4><span class="role">Marketing</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Wszystko działa zgodnie z ustaleniami."</p><h4>Daniel W.</h4><span class="role">Programista</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Bardzo estetyczny wygląd strony."</p><h4>Kamila Z.</h4><span class="role">Blogerka</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Świetna optymalizacja SEO od razu w cenie."</p><h4>Marcin P.</h4><span class="role">SEO Specialist</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Jakość obsługi na 6+."</p><h4>Oliwia D.</h4><span class="role">Klientka</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Praca z Wami to czysta przyjemność."</p><h4>Tomasz G.</h4><span class="role">Partner</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Polecam każdemu, kto szuka profesjonalizmu."</p><h4>Katarzyna W.</h4><span class="role">Właścicielka</span></div>
+    </div>
+</section>
+<footer style="margin-top: 50px; padding: 30px; border-top: 1px solid #2a2929; text-align: center; color: #888;">
+    <p>&copy; 2026 TECH.DEV &bull; 
+        <a href="Kontakt.html" style="color: var(--primary); text-decoration: none; font-weight: bold;font-size: large;">Skontaktuj się z nami klikając we mnie</a>
+    </p>
+</footer>
 </body>
 </html>
