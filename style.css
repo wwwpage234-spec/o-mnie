@@ -1,5 +1,5 @@
 :root {
-    --primary: #00f2ff;       
+    --primary: #00ffdd;       
     --secondary: #bc00ff;    
     --bg: #050505;            
     --card-bg: rgba(255, 255, 255, 0.05);
@@ -89,7 +89,7 @@ h1 {
     font-weight: 900; 
 }
 h1 span {
-    background: linear-gradient(90deg, #fff, #666);
+    background: linear-gradient(90deg, #fff, #bfbfbf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -308,7 +308,7 @@ footer {
 }
 
 .tech-badge:hover {
-    background: rgba(0, 242, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-color: var(--primary);
     transform: translateY(-2px);
 }
@@ -353,7 +353,7 @@ footer {
 .benefit-number {
     font-size: 2.5rem;
     font-weight: 900;
-    color: rgba(0, 242, 255, 0.2);
+    color: rgba(29, 207, 242, 0.882);
     margin-bottom: 10px;
     display: block;
 }
@@ -388,7 +388,6 @@ footer {
     font-size: 3rem;
     font-weight: 900;
     color: var(--primary);
-    opacity: 0.1;
     position: absolute;
     top: 10px;
     right: 20px;
@@ -1128,4 +1127,107 @@ footer {
 .number-label {
     color: #ffffff !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+.promo-banner {
+    width: 100%;
+    background-color: #2c3e50; /* Ciemnogranatowe tło */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
+    font-family: sans-serif;
+    z-index: 9999;
+}
+
+.promo-banner a {
+    color: #ffcc00; /* Złoty kolor linku dla wyróżnienia */
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.promo-box {
+    max-width: 400px;         /* Ogranicza szerokość, żeby nie było pasem na cały ekran */
+    margin: 20px auto;        /* Wyśrodkowuje na górze */
+    padding: 15px 20px;       /* Wewnętrzne odstępy */
+    background-color: #ffffff; /* Białe tło */
+    border: 2px solid #ffcc00; /* Żółta ramka, pasująca do Twojej opcji Premium */
+    border-radius: 12px;      /* Zaokrąglone rogi = "kwadracik" */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Delikatny cień, żeby "odlepić" go od tła */
+    font-family: sans-serif;
+    color: #333;
+    z-index: 9999;
+}
+
+.promo-box a {
+    color: #ff0000;           /* Wyróżniony kolor linku */
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #ff0000;
+}
+/* Kontener, który wyśrodkowuje box na górze */
+.promo-card-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Odstęp od góry strony i od menu */
+    background-color: #f9f9f9; /* Delikatne tło sekcji, żeby box się wyróżniał */
+}
+
+/* Główny styl "kwadracika" (boxa) */
+.promo-card {
+    background-color: #ffffff; /* Białe tło boxa */
+    border: 2px solid #ffcc00; /* Żółta ramka - pasuje do Twojej opcji 'Premium' */
+    border-radius: 15px;      /* Mocno zaokrąglone rogi */
+    padding: 20px;
+    width: 90%;               /* Szerokość na telefonach */
+    max-width: 450px;         /* Maksymalna szerokość na komputerach */
+    display: flex;            /* Układ poziomy ikona | tekst */
+    align-items: center;
+    gap: 15px;                /* Odstęp między ikoną a tekstem */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Cień, żeby box był 'wypukły' */
+}
+
+/* Styl ikony (płomienia) */
+.promo-icon {
+    font-size: 2.5em;
+}
+
+/* Styl tekstu wewnątrz boxa */
+.promo-content h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.promo-content p {
+    margin: 0 0 10px 0;
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Wyróżnienie tekstu (np. 20% taniej) */
+.highlight {
+    color: #e74c3c; /* Czerwony kolor dla ceny */
+    font-weight: bold;
+}
+
+/* Przycisk wewnątrz boxa */
+.promo-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffcc00; /* Żółty przycisk */
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85em;
+    transition: background 0.3s;
+}
+
+.promo-btn:hover {
+    background-color: #e6b800; /* Ciemniejszy żółty po najechaniu */
 }
